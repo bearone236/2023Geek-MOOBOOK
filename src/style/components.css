@@ -1,0 +1,30 @@
+/*---------------------------------
+header.jsxファイルCSS
+----------------------------------*/
+header {
+  text-align: center;
+  padding: 4px 10%;
+  margin-bottom: 50px;
+  background-color: #a578df;
+}
+
+.header {
+  padding-left: 780px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header h1 {
+  margin: auto auto;
+}
+
+.camera {
+  padding-left: 400px;
+}
+
+/*---------------------------------
+camera.jsxファイルCSS
+----------------------------------*/
+.videocontainer {
+  transform: scaleX(-1);
+}
