@@ -2,18 +2,10 @@ import React, { useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../style/pages.css';
 import { usePose } from '../function/postcontext';
-
-const SampleNextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return <div className={className} style={{ ...style, display: 'block', background: 'black', right: '0px' }} onClick={onClick} />;
-};
-
-const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return <div className={className} style={{ ...style, display: 'block', background: 'black', left: '0px' }} onClick={onClick} />;
-};
+import SampleNextArrow from '../components/sampleNextArrow';
+import SamplePrevArrow from '../components/samplePrevArrow';
+import '../style/pages.css';
 
 const Book = () => {
   const sliderRef = useRef(null);

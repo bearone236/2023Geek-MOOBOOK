@@ -3,22 +3,14 @@ import axios from 'axios';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import '../style/pages.css';
 import { Link } from 'react-router-dom';
 import { usePose } from '../function/postcontext';
+import SampleNextArrow from '../components/sampleNextArrow';
+import SamplePrevArrow from '../components/samplePrevArrow';
+import '../style/pages.css';
 
 const baseURL = 'https://sheets.googleapis.com/v4/spreadsheets/1Bcc9S-zQJeEirqOIvml2C3AMziyVFGvf4sMtVa3Ch6s/values/haka?key=AIzaSyA4PLe6OiOkD82M-dB9gyVaV3myLE0CBkg';
 const data_number = 5;
-
-const SampleNextArrow = (props) => {
-  const { className, style, onClick } = props;
-  return <div className={className} style={{ ...style, display: 'block', background: 'black', right: '0px' }} onClick={onClick} />;
-};
-
-const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return <div className={className} style={{ ...style, display: 'block', background: 'black', left: '0px' }} onClick={onClick} />;
-};
 
 const Books = () => {
   const [books, setBooks] = useState([]);
