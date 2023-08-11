@@ -12,7 +12,7 @@ const Book = () => {
   const sliderRef = useRef(null);
   const { pose } = usePose();
   const backRef = useRef(null);
-  const { bookId } = useParams(); // URL パラメータから bookId を取得
+  const { bookId } = useParams();
 
   useEffect(() => {
     if (pose === 'toright') {
