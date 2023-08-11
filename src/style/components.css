@@ -9,7 +9,7 @@ header {
 }
 
 .header {
-  padding-left: 780px;
+  /* padding-left: 780px; */
   display: flex;
   justify-content: space-between;
 }
@@ -18,9 +18,9 @@ header {
   margin: auto auto;
 }
 
-.camera {
+/* .camera {
   padding-left: 400px;
-}
+} */
 
 /*---------------------------------
 camera.jsxファイルCSS
