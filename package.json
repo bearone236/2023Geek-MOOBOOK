@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@tensorflow-models/handpose": "^0.0.7",
+    "@tensorflow/tfjs": "^4.10.0",
+    "@babel/plugin-proposal-private-property-in-object": "^7.16.7",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
