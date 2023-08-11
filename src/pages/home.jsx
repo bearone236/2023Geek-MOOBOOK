@@ -24,7 +24,8 @@ const Home = () => {
       </div> */}
       <div className="homeMenu" id="start_button">
         <Link to={{ pathname: '/book' }} style={{ textDecoration: 'none' }} ref={linkRef} className="homeMenu-images">
-          <p>START</p>
+          <img src={`${process.env.PUBLIC_URL}/images/Home-logo.png`} alt="Home-logo" width="40%" />
+          <p>手を挙げて🖐️</p>
         </Link>
       </div>
     </div>

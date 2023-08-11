@@ -118,7 +118,8 @@ const Camera = () => {
   });
   return (
     <div>
-      <video ref={videoRef} id="video" width="370" height="230" autoPlay playsInline muted style={{ transform: 'scaleX(-1)' }}></video>
+      {/* <video ref={videoRef} id="video" width="370" height="230" autoPlay playsInline muted style={{ transform: 'scaleX(-1)' }}></video> */}
+      <video ref={videoRef} id="video" width="200" height="160" autoPlay playsInline muted style={{ transform: 'scaleX(-1)' }} className="camera"></video>
       {/* <p ref={outputRef} id="output" className="hidden"></p> */}
       {/* <p ref={debugRef} id="debug" className="hidden"></p> */}
     </div>
