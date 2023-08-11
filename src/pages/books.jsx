@@ -104,6 +104,7 @@ const Books = () => {
                 pathname: `/book/${book.bookId}`,
                 state: { book: book },
               }}
+              ref={linkRef}
             >
               <img src={`${process.env.PUBLIC_URL}/images/${book.bookId}.png`} alt={book.title} width="25%" />
             </Link>
