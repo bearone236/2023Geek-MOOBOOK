@@ -60,6 +60,7 @@ const Camera = () => {
             console.log('手が閉じています');
             prevX = null;
             prevY = null;
+            setPose('back');
 
             // setPose('enter');
             // setGesture(true);

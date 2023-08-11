@@ -17,7 +17,7 @@ const Books = () => {
   const { pose } = usePose();
   const linkRef = useRef(null);
   const sliderRef = useRef(null);
-
+  const backRef = useRef(null);
   useEffect(() => {
     if (pose === 'enter') {
       console.log('Go');
@@ -34,6 +34,11 @@ const Books = () => {
       if (sliderRef.current) {
         sliderRef.current.slickPrev();
         // resetPose();
+      }
+    } else if (pose === 'back') {
+      console.log('Back');
+      if (backRef.current) {
+        backRef.current.click();
       }
     }
   }, [pose]);
@@ -123,6 +128,7 @@ const Books = () => {
           );
         })}
       </Slider>
+      <Link to={{ pathname: '/' }} style={{ display: 'none' }} ref={backRef}></Link>
     </div>
   );
 };

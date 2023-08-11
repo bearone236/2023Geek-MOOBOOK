@@ -6,10 +6,12 @@ import { usePose } from '../function/postcontext';
 import SampleNextArrow from '../components/sampleNextArrow';
 import SamplePrevArrow from '../components/samplePrevArrow';
 import '../style/pages.css';
+import { Link } from 'react-router-dom';
 
 const Book = () => {
   const sliderRef = useRef(null);
   const { pose } = usePose();
+  const backRef = useRef(null);
 
   useEffect(() => {
     if (pose === 'toright') {
@@ -21,6 +23,12 @@ const Book = () => {
     } else if (pose === 'toleft') {
       if (sliderRef.current) {
         sliderRef.current.slickPrev();
+        // resetPose();
+      }
+    } else if (pose === 'back') {
+      console.log('Back');
+      if (backRef.current) {
+        backRef.current.click();
         // resetPose();
       }
     }
@@ -59,6 +67,7 @@ const Book = () => {
             })}
         </Slider>
       </div>
+      <Link to={{ pathname: '/' }} style={{ display: 'none' }} ref={backRef}></Link>
     </div>
   );
 };
