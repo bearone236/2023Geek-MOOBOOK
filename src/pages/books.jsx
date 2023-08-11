@@ -11,7 +11,7 @@ import SamplePrevArrow from '../components/samplePrevArrow';
 import '../style/pages.css';
 
 const baseURL = 'https://sheets.googleapis.com/v4/spreadsheets/1Bcc9S-zQJeEirqOIvml2C3AMziyVFGvf4sMtVa3Ch6s/values/haka?key=AIzaSyA4PLe6OiOkD82M-dB9gyVaV3myLE0CBkg';
-const data_number = 5;
+const data_number = 7;
 
 const Books = () => {
   const [books, setBooks] = useState([]);
@@ -105,7 +105,7 @@ const Books = () => {
                 state: { book: book },
               }}
             >
-              <img src={`${process.env.PUBLIC_URL}/images/${book.bookId}.png`} alt={book.title} width="23%" />
+              <img src={`${process.env.PUBLIC_URL}/images/${book.bookId}.png`} alt={book.title} width="25%" />
             </Link>
           </div>
         ))}
