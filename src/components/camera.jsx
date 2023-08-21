@@ -15,6 +15,7 @@ const Camera = () => {
     let prevY = null;
     const threshold = 100;
     const distThreshold = 100;
+    const timeout = 3000;
 
     async function setupCamera() {
       const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'user' }, audio: false });
@@ -43,7 +44,7 @@ const Camera = () => {
           const tip1 = landmarks[6];
           const tip2 = landmarks[7];
           // console.log(landmarks[0][2]);
-
+          
           //   const dist = Math.hypot(tip0[0] - tip1[0], tip0[1] - tip1[1]);
           //   debug.textContent = `dist: ${dist}`;
           const angle =
@@ -60,6 +61,7 @@ const Camera = () => {
             console.log('手が閉じています');
             prevX = null;
             prevY = null;
+            
 
             // setPose('enter');
             // setGesture(true);
@@ -78,11 +80,17 @@ const Camera = () => {
                 // outputRef.current.textContent += `, 手が左に移動しました`;
                 console.log('手が左に移動しました');
                 setPose('toright');
+                prevX = null;
+                prevY = null;
+                setTimeout(timeout);
               } else if (x_dist > threshold) {
                 // Flip}< prevX) { // Flip x-axis detection
                 // outputRef.current.textContent += `, 手が右に移動しました`;
                 console.log('手が右に移動しました');
                 setPose('toleft');
+                prevX = null;
+                prevY = null;
+                setTimeout(timeout);
               } else {
                 // outputRef.current.textContent += ', 手は左右には動いていません';
                 // console.log('手は左右には動いていません');
@@ -94,10 +102,16 @@ const Camera = () => {
                 // outputRef.current.textContent += ', 手が上に移動しました';
                 console.log('手が上に移動しました');
                 setPose('enter');
+                prevX = null;
+                prevY = null;
+                setTimeout(timeout);
                 // setGesture(true);
               } else if (y_dist > distThreshold) {
                 // outputRef.current.textContent += ', 手が下に移動しました';
                 console.log('手が下に移動しました');
+                prevX = null;
+                prevY = null;
+                setTimeout(timeout);
               } else {
                 // outputRef.current.textContent += ', 手は上下には動いていません';
                 // console.log('手は上下に動いていません');
